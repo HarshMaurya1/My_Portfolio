@@ -1,0 +1,152 @@
+.assist {
+    padding: 80px 6%;
+    background-color: #f5f6f7;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* CARD BASE */
+.card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 32px;
+    min-height: 180px;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.7s ease;
+}
+
+/* SCROLL ANIMATION */
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BIG LEFT CARD */
+.big-card {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.big-card h2 {
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.big-card button {
+    width: fit-content;
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* LOGO PLACEHOLDER */
+.logo {
+    font-weight: 600;
+    color: #888;
+    text-decoration: none;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.card h3 {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.card p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+
+/* =========================
+   EXPERIENCE RESPONSIVE
+========================= */
+
+/* Large tablets */
+@media (max-width: 1024px) {
+  .experience-section {
+    padding: 70px 5%;
+  }
+
+  .big-card h2 {
+    font-size: 28px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .big-card {
+    grid-row: auto;
+  }
+
+  .card {
+    padding: 28px;
+  }
+
+  .big-card h2 {
+    font-size: 26px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .experience-section {
+    padding: 60px 4%;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .big-card h2 {
+    font-size: 22px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .big-card button {
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 420px) {
+  .experience-section {
+    padding: 50px 3%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .big-card h2 {
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   EXPERIENCE RESPONSIVE END
+========================= */

@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* body {
+    background: linear-gradient(120deg,
+            rgba(240, 238, 135, 0.824),
+            rgba(0, 106, 255, 1),
+            rgba(123, 0, 255, 1),
+            rgba(240, 200, 255, 1));
+
+} */
+
+.wrapperr {
+  background-color: #f5f6f7;
+  height: 720px;
+}
+
+.wrapper {
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  margin-bottom: 160px;
+
+}
+
+
+
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 250px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.nav-right {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  color: black;
+  margin-right: 100px;
+}
+
+.nav-right a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.login-btn {
+  padding: 8px 18px;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.hero-left h1 {
+  font-size: 62px;
+  font-weight: 700;
+
+}
+
+
+/* Slide in from left animation */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation to heading and paragraph */
+.hero-left h1 {
+  animation: slideInLeft 0.9s ease-out forwards;
+}
+
+.hero-left p {
+  animation: slideInLeft 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+  /* paragraph thoda baad aaye */
+}
+
+/* Button bhi animate krna ho */
+.start-btn {
+  animation: slideInLeft 1.4s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+
+
+.hero-left span {
+  color: #2fa1b3;
+}
+
+.hero-left p {
+  width: 530px;
+  margin-top: 15px;
+  font-size: 17px;
+  font-weight: 70;
+}
+
+.start-btn {
+  margin-top: 25px;
+  background: #2fa1b3;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE CIRCLE UI */
+.circle-banner {
+  width: 370px;
+  height: 370px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-img {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.tag1 {
+  top: 40px;
+  right: -40px;
+}
+
+.tag2 {
+  top: 160px;
+  right: -70px;
+}
+
+.tag3 {
+  bottom: 40px;
+  left: -40px;
+}
+
+.small-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.img1 {
+  top: -40px;
+  left: 120px;
+}
+
+.img2 {
+  bottom: 10px;
+  right: -25px;
+}
+
+.img3 {
+  bottom: -20px;
+  left: 110px;
+}   
+
+
+
+
+/* =========================
+   RESPONSIVE START
+========================= */
+
+/* Large screens (default safe) */
+@media (max-width: 1200px) {
+  .nav-right {
+    margin-right: 0;
+  }
+
+  .hero-left h1 {
+    font-size: 52px;
+  }
+
+  .hero-left p {
+    width: 100%;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .wrapperr {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .hero-left {
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 46px;
+  }
+
+  .hero-left p {
+    margin: auto;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .nav-right {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo {
+    width: 180px;
+  }
+
+  .nav-right {
+    display: none; /* clean mobile look */
+  }
+
+  .hero-left h1 {
+    font-size: 38px;
+  }
+
+  .hero-left p {
+    font-size: 15px;
+  }
+
+  .start-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .circle-banner {
+    width: 280px;
+    height: 280px;
+  }
+
+  .center-img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .small-img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 32px;
+  }
+
+  .hero-left p {
+    font-size: 14px;
+  }
+
+  .circle-banner {
+    width: 240px;
+    height: 240px;
+  }
+
+  .center-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .tag1 {
+    right: -20px;
+  }
+
+  .tag2 {
+    right: -30px;
+  }
+
+  .tag3 {
+    left: -20px;
+  }
+}
+
+/* =========================
+   RESPONSIVE END
+========================= */
+
+
+/* ===== GLOBAL RESPONSIVE FIX ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+

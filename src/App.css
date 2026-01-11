@@ -1,0 +1,69 @@
+
+
+
+/* ===== GLOBAL RESPONSIVE FIX ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 8%;
+  background: #f5f6f7;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-right a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-right a:hover {
+  color: #2fa1b3;
+}

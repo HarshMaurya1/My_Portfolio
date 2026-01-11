@@ -1,0 +1,142 @@
+.skills-section {
+  padding: 80px 8%;
+  background: #f5f6f7;
+  font-family: "Inter", sans-serif;
+}
+
+/* SCROLL ANIMATION */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MISSION BOX */
+.mission-box {
+  background: #35a3b2;
+  color: white;
+  padding: 50px 60px;
+  border-radius: 20px;
+  margin-bottom: 80px;
+}
+
+.mission-box p {
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 500;
+  max-width: 900px;
+}
+
+.brands {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+/* CONTENT */
+.skills-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+
+/* LEFT */
+.skills-left h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* CARDS */
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.skill-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  background: #eef2ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-footer span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #999;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .skills-content {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-box p {
+    font-size: 22px;
+  }
+}
+
+
+.brands {
+  display: flex;
+  /* horizontal layout */
+  flex-wrap: wrap;
+  /* wrap to next line if space not enough */
+  gap: 10px;
+  /* space between each skill */
+  margin-top: 15px;
+}
+
+.brands span {
+  /* background-color: #ffffff33; */
+  /* light transparent background */
+  padding: 6px 12px;
+  /* spacing inside each badge */
+  /* rounded edges */
+  font-size: 0.85rem;
+  color: #fff;
+  white-space: nowrap;
+  /* prevent splitting of words */
+}
